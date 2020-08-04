@@ -1,0 +1,1031 @@
+/* Estilos Generales */
+@font-face {font-family: Swistblnk Monthoers; src: url(../../../fonts/Monthoers.otf);}
+@font-face {font-family: Vincent; src: url(../../../fonts/Vincent-Regular.otf);}
+/*@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i');*/
+@font-face {font-family: Montserrat;
+           src: url('../../../fonts/Montserrat-ThinItalic.ttf') format('ttf'),
+                url('../../../fonts/Montserrat-Thin.ttf') format('ttf'),
+                url('../../../fonts/Montserrat-SemiBoldItalic.ttf') format('ttf'),
+                url('../../../fonts/Montserrat-SemiBold.ttf') format('ttf'),
+                url('../../../fonts/Montserrat-Regular.ttf') format('ttf'),
+                url('../../../fonts/Montserrat-MediumItalic.ttf') format('ttf'),
+                url('../../../fonts/Montserrat-LightItalic.ttf') format('ttf'),
+                url('../../../fonts/Montserrat-Light.ttf') format('ttf'),
+                url('../../../fonts/Montserrat-Italic.ttf') format('ttf'),
+                url('../../../fonts/Montserrat-ExtraLightItalic.ttf') format('ttf'),
+                url('../../../fonts/Montserrat-ExtraLight.ttf') format('ttf'),
+                url('../../../fonts/Montserrat-ExtraBoldItalic.ttf') format('ttf'),
+                url('../../../fonts/Montserrat-ExtraBold.ttf') format('ttf'),
+                url('../../../fonts/Montserrat-Bold.ttf') format('ttf'),
+                url('../../../fonts/Montserrat-BlackItalic.ttf') format('ttf'),
+                url('../../../fonts/Montserrat-Black.ttf') format('ttf');
+    
+}
+/*@import url('https://fonts.googleapis.com/css?family=Cormorant+Infant:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap');*/
+
+/*marron kakita #bc8c3e*/
+::selection{ background: #bc8c3e; color: #f0f0f0 }
+*{ margin: 0; padding: 0;   }
+a,a:link,a:visited,a:hover,a:focus,a:active{
+    color: inherit;
+    text-decoration: none;
+}
+li{ list-style: none; }
+body{ font-family: 'Montserrat'; overflow-x: hidden; }
+/* h2{ font-family: 'Swistblnk Monthoers'; font-weight: lighter; color: white }
+h4{ font-family: 'Vincent'; font-weight: 400; } */
+button{ font-family: 'Montserrat'; }
+button:focus{outline: none;}
+
+
+/*boton comprar sticky*/
+#sticky-comprar{
+        position: fixed;
+        left: 50%;
+        transform:  translateX(-50%) translateY(0%);
+        opacity: 0;
+        transition: .2s ease-out;
+        bottom: 3vh;
+        z-index: 120;
+        display: none;
+    }
+    #sticky-comprar p{
+        color: black;
+        font-weight: 600;
+        font-size: 0.7rem;
+        text-align: center;
+        padding: 6px 12px;
+        background-color: rgba(255,255,255,0.35);
+        border-radius: 55px;
+        margin-bottom: 1vh;
+    }
+    #btn-sticky{
+        background-color: #bc8c3e;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 50px;
+        border: 2px #bc8c3e solid;
+        font-weight: 700;
+        cursor: pointer;
+        display:block;
+        margin: auto;
+    }
+    #btn-sticky:hover{
+        background-color: transparent;
+        color: #bc8c3e;
+    } 
+    
+    #sticky-cont{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #ultimos{
+        text-align: center!important;
+        font-weight: bold!important;
+        margin: 0!important;
+        color: red!important;
+        margin-top: -7px!important;
+        background-color: transparent!important;
+    }
+    
+/* <!-- Portada, primeros 100vh --> */
+#portada-prd{
+    min-height: 100vh;
+}
+#portada-prd nav{
+    padding: 8px 0;
+}
+#portada-prd nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Vincent';
+    
+}
+nav li{
+    color: white;
+    margin: 0 2vw;
+    font-size: 0.9em;
+}
+nav img{
+    width: 85px;
+}
+nav li:nth-child(1), nav li:nth-child(2), nav li:nth-child(5), nav li:nth-child(4){ display:none;}
+#portada-prd>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#nombre-modelo{
+    /* max-width: 17%; */
+    display: block;
+    margin: auto;
+    /* overflow: hidden; */
+    margin-top: 5%;
+}
+#nombre-modelo h1{
+    font-family: 'Swistblnk Monthoers';
+    font-weight: 400;
+    filter: invert(1);
+    font-size: 5em;
+    letter-spacing: 1.35vw;
+    text-align: center;
+    transform: translateX(3%);
+    position: relative;
+    transition-duration: .5s;
+    transition-delay: .3s;
+    transition-timing-function: cubic-bezier(.19,.48,.09,1) ;
+}
+#nombre-modelo h1{
+    transform: translate(3%, 40%);
+    opacity: 0;
+}
+#nombre-modelo h5{
+    font-family: 'Cormorant Infant';
+    font-size: 1.2em;
+    text-align: center;
+    color: #bc8c3e;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    padding: 5px 0;
+    position: relative;
+    transition-duration: .5s;
+    transition-delay: .5s;
+    transition-timing-function: cubic-bezier(.19,.48,.09,1) ;
+}
+#nombre-modelo h5{
+    opacity: 0;
+    transform: translateY(40%);
+}
+
+
+#comprar-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 45vh;
+    width: 50%;
+
+}
+#comprar-info>div{
+    width: 35%;
+}
+#comprar-info p{
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    text-align: right;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 1px #0e0e0e;
+    transition-delay: .4s;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(.19,.48,.09,1);
+}
+#comprar-info span{
+    color: #bc8c3e;
+}
+#comprar-info hr{
+    width: 3em;
+    margin: 0 1.5vw;
+    transform: rotate(90deg);
+    transition-delay: .5s;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(.19,.48,.09,1);
+}
+
+#comprar-info button{
+    background-color: #bc8c3e;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 50px;
+    border: 2px #bc8c3e solid;
+    font-weight: 700;
+    cursor: pointer;
+    /* transition: .6s; */
+    transition: opacity .5s cubic-bezier(.19,.48,.09,1) .6s, background-color .5s cubic-bezier(.19,.48,.09,1) 0s;
+}
+#comprar-info p, #comprar-info hr, #comprar-info button{
+    opacity: 0;
+}
+#comprar-info button:hover{
+    background-color: transparent;
+}
+#portada-prd>div a{
+    display: block;
+    width: 20px;
+    margin: auto;
+    margin-top: 5vh;
+    animation: rebotin  2s ease-in-out 0s infinite forwards;
+    cursor: pointer;
+}
+#portada-prd>div img{
+    display: block;
+    width: 100%;
+}
+@keyframes rebotin{
+    0% { transform: translateY(0%) }
+    30% { transform: translateY(20%) }
+    60% { transform: translateY(0%) }
+    85% { transform: translateY(10%) }
+    100% { transform: translateY(0%) }
+}
+
+
+/* Primera seccion, intro del reloj con la animacion de ensamble */
+main{
+    min-height: 100vh;
+}
+.tucu{
+    padding: 5vh 0;
+    min-height: 50vh;
+}
+main .tucu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+}
+#ensamble-fotos{
+    position: relative;
+    display: block;
+    width: 80%;
+    /* margin:auto; */
+    min-height: 50vh; 
+}
+#ensamble-fotos img{
+    position: absolute;
+    width: 100%;
+    transition: transform  1.3s cubic-bezier(.19,.48,.09,1) .2s, opacity  .2s ease-out;
+    top: 0%;
+}
+main .tucu>div, main .tucu>header{
+    width: 50%;
+}
+
+#materiales{
+    margin-top: 15%;
+    display: flex;
+}
+#materiales>div{
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 5%;
+}
+#materiales>div>div{
+    width: 38px;
+    height: 38px;
+    border-radius: 55px;
+    display: block;
+    margin-right: 8%;
+    cursor: pointer;
+    transition: .2s;
+    position: relative;
+}
+#materiales img ~ p{
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    position: absolute;
+    left: 50%;
+    color: #313131;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: .2s;
+}
+#materiales img:hover ~ p{
+    opacity: 1;
+}
+#materiales>div>div img{
+    width: 100%;
+}
+#materiales>div>div:hover{
+    transform: scale(1.09);
+
+}
+
+/* "materiales que te .. " para desk */
+#materiales .desc{
+    width: 105%;
+    margin-right: -40%;
+}
+/* "materiales que te .. " para mob */
+main>div>p{
+    display: none;
+}
+
+main header{
+    padding: 15% 0;
+}
+
+/* estilo general para todos los textos de los tucu tucu */
+.intro{
+    font-weight: 700;
+    color: #bc8c3e;
+    font-size: 1em;
+    transition: .3s ease-out .3s;
+    opacity: 0;
+    transform: translateY(40px)
+}
+.titulo{
+    font-family: 'Cormorant Infant';
+    font-weight: 700;
+    font-size: 2.8em;
+    margin-bottom: 16px;
+    transition: .3s ease-out .42s;
+    opacity: 0;
+    transform: translateY(40px)
+
+}
+.desc{
+    color: #a7a7a7;
+    font-weight: 300;
+    font-size: 1.12em;
+    transition: .3s ease-out .54s;
+    opacity: 0;
+    transform: translateY(40px);
+}
+.desc strong{
+    color: #a7a7a7;
+    font-weight: 300;
+    font-size: 1.12em;
+}
+
+
+/* franja de la frase del dise単o o alguna introductoria */
+#seccion-frase-1{
+    height: 100vh;
+    background-image: url('../imgs/fondo-taller-reloj.jpg');
+    background-image: radial-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../imgs/fondo-taller-reloj.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+#seccion-frase-1 h5{
+    text-align: center;
+    font-size: 3.5em;
+    font-family: 'Swistblnk Monthoers';
+    font-weight: 300;
+    filter: invert(1);
+    width: 40%;
+    display: block;
+    margin: auto;
+    padding-top: 50%;
+    transition: transform .3s ease-out;
+}
+
+/* empiezan los tucu */
+
+/* primer tucu que habla del cuadrante */
+#seccion-cuadrante>div{
+    display: flex;
+    justify-content: space-between;
+}
+#seccion-cuadrante{ overflow: hidden;}
+#seccion-cuadrante header{
+    margin-left: 20%;
+    padding-top: 17%;
+    width: 30%;
+}
+#seccion-cuadrante>div>div{
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+#seccion-cuadrante img{
+    position: absolute;
+    width: 130%!important;
+    height: auto!important;
+    top: 5%;
+    left: 0%;
+}
+
+/* tucu del JPG, cada pieza es unica */
+#seccion-vetas{
+    padding: 2% 0 2% 4%;
+    background-color: #fafafa;
+    background-color: #f0f0f0;
+
+}
+#seccion-vetas>div{
+    display: flex;
+}
+#seccion-vetas>div>div{
+    width: 70%;
+    height: 93vh;
+    overflow: hidden;
+    position: relative;
+}
+#seccion-vetas img{
+    position: absolute;
+}
+#seccion-vetas header{
+    padding: 15% 5% 0 3%;
+    width: 25%;
+}
+/* Seccion de ligereza, con el PNG de cote */
+#seccion-ligero header{
+    margin-left: 20%;
+    padding-top: 7%;
+    width: 25%;
+}
+#seccion-ligero>div>div{
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 5%;
+}
+#seccion-ligero img{
+    position: absolute;
+    top: 0%;
+    right: -50%;
+}
+
+/* seccion a lo tesla del taller */
+#fondo-taller{
+    position: relative;
+    width: 100%;
+    height: 65vh;
+    overflow: hidden;
+}
+#fondo-taller video{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -20%;
+    z-index: 1;
+    filter: brightness(0.85)
+}
+
+#fondo-taller>div{
+    z-index: 3;
+    position: absolute;
+    bottom: 0;
+    z-index: 10;;
+    padding-bottom: 2%;
+}
+#pasos-proceso{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin:auto;
+}
+#pasos-proceso>div{
+    width: 27%;
+    position: relative;
+}
+
+#paso-1:after, #paso-2:after, #paso-3:after{
+    position: absolute;
+    color: white;
+    font-size: 5em;
+    opacity: 0.4;
+    top: -50%;
+    left: -10%;
+    font-weight: 600;
+}
+#paso-1:after{ content:".01"; }
+#paso-2:after{ content:".02"; }
+#paso-3:after{ content:".03"; }
+
+#pasos-proceso hr{
+    transform: rotate(180deg);
+    width: 2px;
+    background: white;
+    border: none;
+}
+#pasos-proceso h6{
+    color: white;
+    font-size: 1em;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.3)
+}
+#pasos-proceso p{
+    font-weight: 300;
+    color: white;
+    font-size: 0.85em;
+}
+#pasos-proceso span{display:none }
+#seccion-taller header{
+    width: 70%;
+    margin: auto;
+    padding: 4% 0;
+    display: flex;
+    justify-content: space-between;
+}
+#seccion-taller header>div{
+    width: 46%;
+}
+#seccion-taller header>p{
+    width: 46%;
+}
+#botones-proceso{
+    display: none;
+    align-items: center;
+    transition: .3s ease-out .54s;
+    opacity: 0;
+    transform: translateY(40px)
+}
+#proceso-btn{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: .2s;
+}
+#proceso-btn button{
+    font-weight: 700;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+#proceso-btn img{
+    width: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px black solid;
+    border-radius: 50px;
+    display: inline-block;
+   
+}
+#video-btn{
+    font-weight: 700;
+    background: none;
+    border: 1.5px black solid;
+    border-radius: 50px;
+    padding: 5px 25px;
+    margin: 0 25px;
+    cursor: pointer;
+    transition: .2s;
+}
+#proceso-btn:hover{
+    transform: scale(1.05);
+}
+#video-btn:hover{
+    background: black;
+    color: white
+}
+
+/* segunda frase que speara el tucu de la tapita */
+
+#seccion-frase-2>div{
+    width: 80%;
+    margin: auto;
+}
+#seccion-frase-2 #nombre-mod{
+    font-size: 3em;
+    font-family: 'Swistblnk Monthoers';
+    font-weight: 300;
+    filter: invert(1);
+    display: block;
+    padding-top: 50%;
+    transition: transform .3s ease-out;
+}
+#seccion-frase-2 #etimologia{
+    color: white;
+    margin: 12px 0;
+    color: #bc8c3e;
+    font-family: 'Cormorant Infant';
+    font-size: 1.5rem;
+    font-weight: 600;
+    /* max-width: 50%; */
+    font-style: italic;
+    display: inline-block;
+    transition: transform .3s ease-out;
+    padding-right: 10px;
+    position: relative;
+    
+}
+#ona{ cursor: pointer; }
+/* #content:hover~#b */
+#ona:hover~#ona-def{
+    display: block;
+}
+#ona-def{
+    top: -100%;
+    left: 100%;
+    position: absolute;
+    /* display: none; */
+    font-family: 'Montserrat';
+    color: #f0f0f0;
+    font-weight: 300;
+    font-size: 0.75rem;
+    color: #a7a7a7;
+    width: 30vw;
+    display: none;
+}
+#seccion-frase-2 #asociacion{
+    color: #f0f0f0;
+    font-weight: 300;
+    width: 50%;
+    font-size: 0.9rem;
+    transition: transform .3s ease-out;
+
+}
+
+/*Solo para el mahai*/
+#especial{
+    text-transform: uppercase;
+    color: #f0f0f0;
+    font-weight: bold;
+    margin: 12px 0;
+    font-size: 0.8em;
+    border: 2px solid #f0f0f0;
+    width: fit-content;
+    padding: 5px 20px;
+    border-radius: 20px;
+    transition: opacity 0.4s;
+}
+
+#especial:hover{
+    background-color: white;
+    color: black;
+}
+
+#justificacion{
+    color: #f0f0f0;
+    font-size: 0.9em;
+    width: 70%;
+    transition: opacity 0.6s;
+    display: none;
+    border-left: 2px solid rgb(240, 240, 240);
+    padding-left: 10px;
+}
+
+
+/* seccion tapa de aluminio */
+#seccion-tapita{
+    background-color: #f0f0f0;
+    background-image: linear-gradient(to bottom left, #fafafa, #f0f0f0);
+    min-height: 100vh;
+}
+#seccion-tapita>div{
+    display: flex;
+}
+#seccion-tapita>div>div{
+    width: 50%;
+    position: relative;
+    /* overflow: hidden; */
+    height: 85vh;
+}
+#seccion-tapita img{
+    height: 650px!important;
+    position: absolute;
+    bottom: -25%;
+    left: -35%;
+}
+
+#seccion-tapita header{
+    width: 30%;
+    padding-top: 10%;
+    padding-right: 20%;
+}
+
+/* seccion correas */
+#seccion-correas{
+    padding: 5% 0;
+}
+#seccion-correas #correas-info{
+    /* min-height: 110vh; */
+    display: flex;
+    padding-top: 20%;
+    padding-bottom: 15%;
+
+}
+#seccion-correas header{
+    width: 30%;
+    padding-left: 20%;
+}
+#correas-info>div{
+    position: relative;
+    width: 50%;
+}
+#correas-foto{
+    position: absolute;
+    width: 100%;
+}
+#remache-foto{
+    position: absolute;
+    top: -13%;
+    left: 0;
+    width: 200px;
+}
+
+#corras-instr{
+    padding-bottom: 20%;
+    position: relative;
+    height: 20vh;
+    overflow: hidden;
+    display:none;
+    
+}
+#corras-instr img{
+    position: absolute;
+    left: 0%;
+}
+
+/* CARACTERISTICAS */
+#seccion-caracteristicas{
+    background: black;
+    padding: 5% 0;
+}
+#seccion-caracteristicas>h4 {
+    color: white;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    font-family: 'Vincent';
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 5%;
+}
+#seccion-caracteristicas>div{
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+#sketch{
+    width: 50%;
+}
+#specs{
+    width: 40%;
+    padding: 2% 0 2% 10%;
+    color: white;
+    /* background-color: rgba(255, 0, 0, .5) */
+}
+#specs h5{
+    font-size: 1.75em;
+    letter-spacing: 2px;
+    margin-bottom: 10%;
+    text-align: center;
+    transition-delay: .3s;
+
+}
+#specs>div{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    transition-delay: .42s;
+}
+#specs h5, #specs>div, #specs>span {
+    transform: translateY(40px);
+    opacity: 0;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(.19,.48,.09,1) ;
+}
+
+#specs>div>div{
+    width: 40%;
+    margin-bottom: 5%;
+}
+#specs>div>div:after{
+    content:"___";
+    color: white;
+    font-size: 1em;
+    display: block;
+}
+#specs div p{
+    font-weight: 700;
+}
+#specs div span{
+    font-weight: 300;
+    font-size: 1.1em;
+}
+.no-after:after{
+    content:""!important;
+}
+#specs>span{
+    margin-top: 10%;
+    display: inline-flex;
+    align-items: center;
+    box-sizing: content-box;
+    color: black;
+    background-color: white;
+    padding: 8px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.75em;
+    transition-delay: .54s;
+}
+#specs>span img{
+    height: 1.2em;
+    margin-right: 5px;
+}
+
+/* seccion finalizar compra */
+#finalizar-compra{
+    background-image: radial-gradient( #fafafa, #f0f0f0);
+    min-height: 100vh;
+}
+#finalizar-compra>div{
+    display: flex;
+}
+#info-precio{
+    padding: 13% 0 0 20%;
+    width: 30%;
+}
+#png-final{
+    padding-top: 5%;
+    width: 70%;
+    overflow:hidden;
+    position: relative;
+    height: 90vh;
+}
+#png-final img{
+    position:absolute;
+    left: -10%;
+    width: 140%!important;
+    height: auto!important;
+}
+#info-precio h2{
+    font-size: 4.2em;
+    font-weight: 300;
+    font-family: 'Swistblnk Monthoers';
+}
+#info-precio span{
+    font-weight: 700;
+    font-size: 0.9em;
+}
+#info-precio span:nth-child(3){
+    color: #bc8c3e;
+}
+
+.precio-descuento{
+    background-color: #bc8c3e;
+    color: white;
+    padding: 3px 9px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+#info-precio p{
+    margin: 5% 0;
+    width: 40%;
+    font-size: 0.9em;
+    color: #a7a7a7;
+    font-weight: 300;
+}
+#info-precio button{
+    background: #bc8c3e;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    border: 2px #bc8c3e solid;
+    font-weight: 700;
+    cursor: pointer;
+}
+#info-precio button:hover{
+    background: transparent;
+    color: #bc8c3e;
+}
+
+
+/* RETOQUE PARA LA SECCION DE CUADRANTE */
+@media (max-width: 1225px) {
+/* @media only screen and (max-width: 950px) { */
+
+    #seccion-cuadrante img{
+        width: 145%;
+        top: 5%;
+        left: 0%;
+    }
+    #info-precio p{
+        width: 50%;
+    }
+    #seccion-ligero img{
+        right: -80%!important;
+    }
+    #seccion-frase-1 h5{
+        padding-top: 65%;
+    }
+
+}
+/* EN CASO QUE SEA TABLET SE ACHICAN LOS MARGENES DE LOS COSTADOS Y ALGUNOS DETALLES */
+/* @media (max-width: 960px) { */
+@media only screen and (max-width: 950px) {
+
+    #comprar-info{
+        width: 60%;
+    }
+    main .tucu{
+        width: 80%;
+    }
+    aside h5{
+        width: 60%;
+        padding-top: 25%;
+    }
+    #seccion-cuadrante header{
+        width: 130%;
+        top: 5%;
+    }
+    #seccion-cuadrante img{
+        top: 5%;
+    }
+    #seccion-vetas>div>div {
+        width: 60%;
+        height: 70vh;
+    }
+    #seccion-vetas header {
+        padding: 5% 5% 0 3%;
+        width: 30%;    
+    }
+    #seccion-ligero header {
+        margin-left: 10%;
+        padding-top: 5%;
+        width: 45%;
+    }
+    #seccion-ligero img{
+        right: -100%!important;
+    }
+    #pasos-proceso, #seccion-taller header{
+        width: 90%;
+    }
+    #fondo-taller>div {
+        padding-bottom: 4%;
+    }
+    #seccion-frase-2 p {
+        width: 70%;
+    }
+    #seccion-tapita header {
+        width: 40%;
+        padding-top: 7%;
+        padding-right: 10%;
+    }
+    #seccion-correas header {
+        width: 40%;
+        padding-left: 10%;
+    }
+    #seccion-ligero img{
+        right: -100%!important;
+    }
+    #sketch {
+        width: 70%;
+        margin-left: -12%;
+    }
+    #finalizar-compra {
+        min-height: 70vh;
+    }
+}
+
+/* CSS PARA CTA NAVIDAD */
+
+.i-nav {
+    background-color: #bf1b1b;
+    color: white;
+    padding: 4px 10px 6px 11px;
+    border-radius: 27px;
+    font-size: 1.4em;
+    text-align: center;
+    transform: translate(118px, 20px) scale(0.7);
+    width: 16px;
+    height: 26px;
+    /* padding-top: 20px; */
+    font-family: montserrat;
+    font-weight: bold;
+    text-transform: lowercase!important;
+    cursor: pointer;
+    display: block;
+}
+
+.regalito{
+    height: 25px;
+    width: 25px;
+}
+
+.nav-msg{
+    font-family: montserrat;
+    letter-spacing: 0;
+    font-size: 1em;
+    width: 472px;
+    text-align: left;
+    position: absolute;
+    text-transform: none;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    padding: 10px;
+    transform: translate(-3%, -135px);
+    padding: 20px;
+    z-index: 3;
+    display: none;
+}
+
+#sticky-comprar-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#p-preventa{
+    padding: 0px 12px 9px 12px;
+    height: 26px;
+    width: 218px;
+}
+

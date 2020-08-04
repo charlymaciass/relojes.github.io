@@ -1,0 +1,17 @@
+#portada-prd{
+    background-image: url('fotos/moradillo-portada.html');
+    background-image: radial-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.43)), url('../fotos/moradillo-portada.jpg');
+	background-size: auto 120%;
+    background-position: 50% 0%;   
+    background-repeat: no-repeat;
+}
+#seccion-frase-2{
+    background-image: url('../imgs/mahai-wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#seccion-vetas img{
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
