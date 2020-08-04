@@ -1,0 +1,763 @@
+@font-face {font-family: Swistblnk Monthoers; src: url('../../fonts/Monthoers.otf');}
+@font-face {font-family: Vincent; src: url('../../fonts/Vincent-Regular.otf');}
+@font-face {font-family: Cormorant Infant; src: url('../../fonts/CormorantInfant-Medium.ttf');}
+/*@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i');*/
+@font-face {font-family: Montserrat;
+           src: url('../../fonts/Montserrat-ThinItalic.ttf') format('ttf'),
+                url('../../fonts/Montserrat-Thin.ttf') format('ttf'),
+                url('../../fonts/Montserrat-SemiBoldItalic.ttf') format('ttf'),
+                url('../../fonts/Montserrat-SemiBold.ttf') format('ttf'),
+                url('../../fonts/Montserrat-Regular.ttf') format('ttf'),
+                url('../../fonts/Montserrat-MediumItalic.ttf') format('ttf'),
+                url('../../fonts/Montserrat-LightItalic.ttf') format('ttf'),
+                url('../../fonts/Montserrat-Light.ttf') format('ttf'),
+                url('../../fonts/Montserrat-Italic.ttf') format('ttf'),
+                url('../../fonts/Montserrat-ExtraLightItalic.ttf') format('ttf'),
+                url('../../fonts/Montserrat-ExtraLight.ttf') format('ttf'),
+                url('../../fonts/Montserrat-ExtraBoldItalic.ttf') format('ttf'),
+                url('../../fonts/Montserrat-ExtraBold.ttf') format('ttf'),
+                url('../../fonts/Montserrat-Bold.ttf') format('ttf'),
+                url('../../fonts/Montserrat-BlackItalic.ttf') format('ttf'),
+                url('../../fonts/Montserrat-Black.ttf') format('ttf');
+    
+}
+
+
+
+
+/*marron kakita #bc8c3e*/
+::selection{ background: #bc8c3e; color: #f0f0f0 }
+*{ margin: 0; padding: 0; }
+a{ text-decoration: none; }
+li{ list-style: none; }
+body{ font-family: 'Montserrat'; overflow-x: hidden; }
+h2{ font-family: 'Swistblnk Monthoers'; font-weight: lighter; }
+h4{ font-family: 'Vincent'; font-weight: 400; }
+button{ font-family: 'Montserrat'; }
+.cont80x100{
+	width: 80%;
+	display: block;
+	margin: auto;
+}
+
+
+/* Franja removible envio gratis */
+#envioGratarola{
+	width: 100%;
+	top: 0;
+	position: fixed;
+	z-index: 999;
+	background-image: linear-gradient( to top left, #bc8c3e, #fcbf5d );
+	padding: 3px 0;
+}
+#envioGratarola>div{ position: relative; }
+#envioGratarola p{
+	text-align: center;
+	font-size: 0.6em;
+	font-weight: 400;
+	color: white;
+	width: 50%;
+	display: block;
+	margin: auto;
+}
+#envioGratarola span{
+	position: absolute;
+	font-weight: 400;
+	color: white;
+	right: 0;
+	top: -50%;
+	cursor: pointer;
+}
+
+/* portada */
+#portada-home{
+	position: relative;
+    min-height: 100vh;
+    background-image: radial-gradient( rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(../watches/imgs/portada-mate.jpg);
+    background-size: fill;
+    background-position: 70% 36%;
+    background-attachment: fixed;
+}
+
+#portada-home>img{
+	padding-top: 5%;
+	display: block;
+	margin: auto;
+	width:6.5%;
+}
+#portada-home h4{
+	color: #bc8c3e;
+	text-align: center;
+	margin: 10% auto 3% auto;
+	letter-spacing: 0.4vw;
+	font-size: 1.2em;
+	text-shadow: 1px 1px 1px #1d1d1d;
+	opacity: 0;
+	transform: translateY(150%);
+	transition: .45s;
+	font-family: 'Vincent';
+	font-weight: 300;
+}
+#portada-home h2{
+	color: white;
+	font-size: 6em;
+	text-align: center;
+	letter-spacing: -1.5vw;
+	text-shadow: 1px 1px 2px #111111;
+	transition: .55s;
+	opacity: 0;
+	font-weight: 300;
+	font-family: 'Swistblnk Monthoers';
+
+}
+#portada-home nav{
+	display: none;
+}
+nav>ul{
+	margin-top: 18%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+nav img{
+	cursor: auto;
+	user-select: none;
+}
+nav li{
+	color: white;
+	font-family: 'Vincent';
+	margin: 0 2.5%;
+	font-size: 1.2em;
+	cursor: pointer;
+	transition: all .45s;
+	opacity: 0;
+	text-shadow: 1px 1px #252525;
+}
+
+nav li:hover{
+	/*color: #e1a748;*/
+}
+
+nav li:nth-child(3){ opacity: 1!important }
+nav li:nth-child(1),nav li:nth-child(2){ transform: translateX(50%); }
+nav li:nth-child(4),nav li:nth-child(5){ transform: translateX(-50%); }
+
+nav li:nth-child(3):before{ display: none; }
+
+nav a{ color: inherit; }
+
+nav li:before{
+	content: '';
+    position: absolute;
+    background-image: radial-gradient( #bc8c3e 50% , rgba(0,0,0,0) 70%);
+    opacity: 0.6;
+    display: block;
+    width: 0%;
+    height: 20%;
+    bottom: 0;
+    left: -10%;
+    transition: .2s ease-in-out;
+    transform-origin: 0% 50%;
+    border-top: none;
+    border-right: none;
+    z-index: 2;
+    transform: rotate(-9deg);
+    outline: none;
+}
+nav li:hover:before{
+    width: 120%;
+}
+
+#portada-home>div a{
+    display: block;
+    margin: auto;
+	position: absolute;
+	bottom: 5vh;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 20%;
+}
+#portada-home>div p{
+	font-weight: 500;
+	color: white;
+	text-align: center;
+	display: block;
+	margin: auto;
+	font-size: 0.8em;
+	color: #d1d1d1;
+}
+
+#portada-home>div img{
+	width: 20px;
+	animation: rebotin  2s ease-in-out 0s infinite forwards;
+	display: block;
+	margin: auto;
+}
+@keyframes rebotin{
+    0% { transform: translateY(0%) }
+    30% { transform: translateY(20%) }
+    60% { transform: translateY(0%) }
+    85% { transform: translateY(10%) }
+    100% { transform: translateY(0%) }
+}
+
+
+
+
+/* los 4 relojes mostrados */
+#relojes-home-cont{
+	width: 100%;
+	background-color: #fbf8f8;
+	padding: 10vh 0;
+}
+#relojes-cont-prd-home{
+	width: 80%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	/* transform: scale(0.8); */
+}
+#relojes-cont-prd-home a{
+	width: 25%;
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+    margin-right: 10px;
+}
+#relojes-cont-prd-home a:last-child{
+    margin-right: 0;
+}
+.reloj-cont-prd-home{
+	height: 68vh;
+	
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    overflow: hidden;
+	background-color: gray;
+}
+.reloj-cont-prd-home{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	justify-content: flex-end;
+	color: white;
+
+}
+
+.titulo-prds-home{
+	font-family: 'vincent';
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 1.7px;
+}
+.titulo-prds-home h5{
+	font-weight: 300;
+	font-size: 1rem;
+}
+
+.precio-prd-home{
+	font-family: 'montserrat';
+	font-weight: 600;
+	font-size: 0.75em;
+}
+.nombre-prd-home{
+	font-family: 'vincent';
+	letter-spacing: 4px;
+	font-size: 1em;
+}
+.btn-prd-home button{
+	text-transform: uppercase;
+	font-family: 'montserrat';
+    padding: 8px 30px;
+    border: 2px solid white;
+    border-radius: 25px;
+    font-size: 0.75em;
+    transform: scale(0.9);
+	text-align: center!important;
+	background: transparent;
+	font-weight: 500;
+	color: white;
+}
+
+.btn-prd-home button:hover{
+	cursor: pointer;
+	background-color: white;
+	color: black;
+	border: 2px solid transparent;
+}
+
+.textos-prd-home div{
+	margin-bottom: 13px;
+}
+
+.textos-prd-home{
+	transition: all 0.2s;
+	position: absolute;
+    padding-bottom: 31px;
+}
+
+.prd-bg{
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+	transition: transform 0.3s;
+}
+
+#lenga:hover{
+	transform: scale(1.05);
+}
+
+#guayubira:hover{
+	transform: scale(1.05);
+}
+
+#cancharana:hover{
+	transform: scale(1.05);
+}
+
+#moradillo:hover{
+	transform: scale(1.05);
+}
+
+#lenga{
+	background-image: url('../imgs/lenga.jpg');
+}
+
+#guayubira{
+	background-image: url('../imgs/guayubira.jpg');
+}
+
+#moradillo{
+	background-image: url('../imgs/moradillo.jpg');
+}
+
+#cancharana{
+	background-image: url('../imgs/cancharana.jpg');
+}
+
+section{
+	padding: 5% 0;
+	padding-bottom: 3%;
+	background: white;
+	position: relative;
+	transition: .25s;
+}
+section h4{
+	margin: auto;
+	text-align: center;
+	letter-spacing: 0.4vw;
+	font-size: 1.2em;
+}
+
+#listaProceso>article{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 4% 0;
+	/*transition: .2s;*/
+}
+.fotoCont img{ transition: .25s; border-radius: 10px;}
+#listaProceso>article>div{ width: 48%; transition: .2s; transform-origin: 0 100% }
+.descCont h5{
+	letter-spacing: 6px;
+	font-size: 1.85em;
+	margin-bottom: 1.5%;
+}
+.descCont span:first-child{
+	color: #7b7b7b;
+	display: block;
+	font-size: 0.8em;
+	font-family: 'Montserrat';
+	letter-spacing: 1px;
+	margin-bottom: 1.5%;
+}
+
+.descCont span{
+	color: #bc8c3e;
+	font-family: 'Vincent';
+	font-size: 1.2em;
+	letter-spacing: 2px;
+}
+.descCont p{
+	font-size: 0.85em;
+	color: #2f2f2f;
+	margin-top: 1.5%;
+	margin-bottom: 3%;
+}
+#procesoCont{background: #fbf8f8;}
+#procesoCont:before{
+	content: '';
+	display: block;
+	width: 7vh;
+	height: 7vh;
+	background-color: #fbf8f8;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateY(45%) translateX(-50%) rotate(40deg) skew(-12deg);
+	z-index: 4;
+}
+#verMasProc{
+	background-image: linear-gradient(rgba(0,0,0,0) 22% , #fbf8f8 77%);
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    height: 25%;
+    transition: all .25s;
+ }
+
+#verMasProc p{
+	display: table;
+	margin: auto;
+	margin-top: 12.5%;
+	text-align: center;
+	font-size: 0.75em;
+	cursor: pointer;
+	position: relative;
+	z-index: 99;
+}
+#verMasProc img{
+	display: block;
+	margin: auto;
+	margin-top: 5px;
+	cursor: pointer;
+	position: relative;
+	z-index: 99;
+}
+
+ aside{
+ 	background: black;
+ 	padding: 7.5% 0;
+	background: url('../imgs/franjaNace.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: all .25s;
+	position: relative;
+	z-index: 1;
+}
+
+ aside h4{
+ 	color: #bc8c3e;
+	text-align: center;
+	margin: auto;
+	letter-spacing: 0.4vw;
+	font-size: 1.2em;
+	text-shadow: 1px 1px 1px #1d1d1d;
+		opacity: 0;
+	transform: translateY(150%);
+	transition: .35s;
+ }
+ aside h2{
+ 	color: white;
+	font-size: 6em;
+	text-align: center;
+	/*letter-spacing: 2.5vw;*/
+	text-shadow: 1px 1px 2px #111111;
+	margin: 3% 0;
+	opacity: 0;
+	letter-spacing: -1.5vw;
+	transition: .35s;
+ }
+ aside p{
+ 	text-align: center;
+ 	width: 80%;
+ 	color: #e8e8e8;
+ 	margin: auto;
+ 	font-size: 0.9em;
+	opacity: 0;
+	transform: translateY(150%);
+	transition: .35s;
+	transition-delay: .2s;
+ }
+ #somosHidden{
+ 	align-items: flex-start;
+ 	justify-content: space-between;
+ 	display: none;
+ 	margin: 8% 0;
+	
+ 	opacity: 0;
+ 	position: absolute;
+ 	transition: .25s;
+ }
+ #somosHidden div{
+ 	width: 45%;
+ }
+ #videito{
+ 	/*max-height: 300px;*/
+ }
+ #somosHidden p{
+ 	color: #f0f0f0;
+ 	font-size: 0.85em;
+ 	text-align: left!important;
+ 	width: 51%;
+ 	line-height: 1.2;
+ 	font-weight: lighter;
+ 	margin: 0
+ }
+
+#verSomos{
+	position: absolute;
+	left: 50%;
+	bottom: 8%;
+	transition: .25s;
+ 	font-size: 0.75em;
+ 	width: 15%;
+ 	cursor: pointer;
+ 	opacity: 0;
+ 	transform: translateY(150%) translateX(-50%);
+	transition: .35s;
+	transition-delay: .3s;
+
+ }
+ #verSomos img{
+  	display: block;
+  	margin: auto;
+  	margin-top: 5px;
+  	transition: .25s;
+  }
+
+#shopNow{
+  	background-image: radial-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../watches/imgs/fondo-shop.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding-top: 15%;
+	padding-bottom: 2%;
+	position: relative;
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 45vh;
+	overflow: hidden;
+	border-radius: 10px;
+}
+#shopNow img{
+	top: 0;
+	position: absolute;
+	width: 100%;
+
+}
+#shopNow h2{
+  	color: white;
+	font-size: 3em;
+	text-align: center;
+	text-shadow: 1px 1px 2px #111111;
+	letter-spacing: 1px;
+	z-index: 99;
+	position: relative;
+  }
+#shopNow h6{
+	display: table;
+	margin: auto!important;
+	margin-top: 1%;
+	color: #bc8c3e;
+	font-size: 2em;
+	text-shadow: 2px 2px 2px #111111;
+	text-align: center;
+	font-weight: 400;
+	font-family: 'Swistblnk Monthoers';
+	transition: all .2s;
+	cursor: pointer;
+	position: relative;
+
+}
+#shopNow h6:before{
+	content: '-';
+	position: absolute;
+	font-weight: 600;
+	left: -15px;
+	transition: all .16s;
+	transition-timing-function: ease-in-out;
+	/*opacity: 0*/
+}
+#shopNow h6:after{
+	content: '-';
+	position: absolute;
+	font-weight: 600;
+	right: -15px;
+	transition: all .16s;
+	transition-timing-function: ease-in-out;
+	/*opacity: 0*/
+}
+#shopNow h6:hover:before, #persoYcorpo>div>h6:hover:before{
+	left: -30px;
+}
+#shopNow h6:hover:after, #persoYcorpo>div>h6:hover:after{
+	right: -30px;
+}
+#persoYcorpo a{ color: #bc8c3e; }
+
+#galeria1{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 1.5%;
+}
+#galeria1>div{
+	background-color: #ddd;
+	height: 300px;
+	min-width: 300px;
+/*	border: 1px solid black;*/
+	margin-top: 1.5%;	
+	margin-bottom: 1.5%;
+	background-position: center!important;
+	background-size:cover;
+	border-radius: 10px;
+}
+#foto1{ width: 58.5%;background-image: url('../imgs/reforestando-relojes-lengas-gal1.1.jpg');  }
+#foto2{ width: 38.5%;background-image: url('../imgs/lengas-home-gallery-2.jpg');  }
+#foto3{ width: 38.5%;background-image: url('../imgs/lengas-home-gallery-3.jpg');  }
+#foto4{ width: 58.5%;background-image: url('../imgs/lengas-home-gallery-4.jpg');  }
+
+
+
+
+#persoYcorpo{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+#persoYcorpo>div{
+    min-width: 300px;
+    width: 48%;
+    /* height: 55vh; */
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all .35s;
+    transform: scale(0);
+    border-radius: 10px;
+    padding-bottom: 25px;
+}
+#persoYcorpo>div:hover{
+	background-size: 120%;
+}
+
+#persoYcorpo h2{
+	margin-top: 45%;
+	color: white;
+	font-size: 3em;
+	text-align: center;
+	text-shadow: 1px 1px 2px #111111;
+	letter-spacing: 1px;
+
+}
+#persoYcorpo h6:after,#persoYcorpo h6:before{
+	content: '-';
+	position: absolute;
+	font-weight: 600;
+	transition: all .16s;
+	transition-timing-function: ease-in-out;
+}
+
+#persoYcorpo h6:after{
+	right: -15px;
+}
+
+#persoYcorpo h6:before{
+	left: -15px;
+}
+
+#persoYcorpo h6{
+	display: table;
+	margin: auto;
+	margin-top: 1%;
+	color: #bc8c3e;
+	font-size: 2em;
+	text-shadow: 2px 2px 2px #111111;
+	text-align: center;
+	font-weight: 400;
+	font-family: 'Swistblnk Monthoers';
+	transition: all .2s;
+	cursor: pointer;
+	position: relative;
+}
+#personalizado{ background-image: url('../imgs/personalizado.jpg'); }
+#corporativo{ background-image: url('../imgs/corporativo.jpg'); }
+
+
+footer{
+	background-image: url('../imgs/franja4Tips.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 5% 0;
+	z-index: 99;
+	position: relative;
+}
+#franjaTips{
+	display: flex;
+	justify-content: space-between;
+}
+#franjaTips>div{
+	display: flex;
+	align-items: center;
+	width: 20%;
+}
+#franjaTips img{
+	margin-right: 5%;
+	display: block;
+	margin: auto;
+}
+#franjaTips p{
+	margin-left: 5%;
+	font-family: 'Vincent';
+	color: #cecece;
+}
+
+.todaviaNo{
+	display: none!important;
+
+}
+/*article:hover{
+	border: 1px rgba(0,0,0,0.5) dashed;
+}*/
+article:hover div{	
+	transform: translate(10px, -10px) scale(1.02);
+}
+article:hover img{
+	box-shadow: -10px 10px 15px 0px #ddd
+}
+
+
+#envioGratarola{
+	width: 100%;
+	top: 0;
+	position: fixed;
+	z-index: 999;
+	background-image: linear-gradient( to top left, #bc8c3e, #fcbf5d );
+	padding: 3px 0;
+}
+#envioGratarola>div{ position: relative; }
+#envioGratarola p{
+	text-align: center;
+	font-size: 0.6em;
+	font-weight: 400;
+	color: white;
+	width: 50%;
+	display: block;
+	margin: auto;
+}
+#envioGratarola span{
+	position: absolute;
+	font-weight: 400;
+	color: white;
+	right: 0;
+	top: -50%;
+	cursor: pointer;
+}
+
+
+@media only screen and (max-width: 950px) {
+.cont80x100 {
+    width: 90%;
+  }
+header>div>img{
+	width:9%;
+}
+
+
+
+}

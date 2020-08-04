@@ -1,0 +1,196 @@
+@font-face {font-family: Swistblnk Monthoers; src: url(../fonts/Monthoers.otf);}
+@font-face {font-family: Vincent; src: url(../fonts/Vincent-Regular.otf);}
+/*@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i');*/
+/*@font-face {font-family: Montserrat;*/
+/*           src: url('/fonts/Montserrat-ThinItalic.ttf');*/
+/*                url('/fonts/Montserrat-Thin.ttf');*/
+/*                url('/fonts/Montserrat-SemiBoldItalic.ttf');*/
+/*                url('/fonts/Montserrat-SemiBold.ttf');*/
+/*                url('/fonts/Montserrat-Regular.ttf');*/
+/*                url('/fonts/Montserrat-MediumItalic.ttf');*/
+/*                url('/fonts/Montserrat-LightItalic.ttf');*/
+/*                url('/fonts/Montserrat-Light.ttf');*/
+/*                url('/fonts/Montserrat-Italic.ttf');*/
+/*                url('/fonts/Montserrat-ExtraLightItalic.ttf');*/
+/*                url('/fonts/Montserrat-ExtraLight.ttf');*/
+/*                url('/fonts/Montserrat-ExtraBoldItalic.ttf');*/
+/*                url('/fonts/Montserrat-ExtraBold.ttf');*/
+/*                url('/fonts/Montserrat-Bold.ttf');*/
+/*                url('/fonts/Montserrat-BlackItalic.ttf');*/
+/*                url('/fonts/Montserrat-Black.ttf');*/
+    
+/*}*/
+
+@font-face {
+  font-family: Dancing Script;
+  src: url(../fonts/DancingScript-Regular.ttf); format('ttf');
+}
+/*@font-face {
+  font-family: myFirstFont;
+  src: url(sansation_light.woff);
+}*/
+
+
+
+
+/*marron kakita #bc8c3e*/
+::selection{ background: #bc8c3e; color: #f0f0f0 }
+*{ margin: 0; padding: 0; }
+a{ text-decoration: none; }
+li{ list-style: none; }
+body{ font-family: 'Montserrat'; overflow-x: hidden; }
+h2{ font-family: 'Swistblnk Monthoers'; font-weight: lighter; }
+h4{ font-family: 'Vincent'; font-weight: 400; }
+button{ font-family: 'Montserrat'; }
+.cont80x100{
+	width: 90%;
+	display: block;
+	margin: auto;
+}
+#logoMob{ display: block; margin: auto; margin-top: 5vh }
+
+nav{ display: none!important }
+
+header{
+	background-image:url('../imgs/personalizado.jpg');
+	background-size: cover;
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding: 10vh 0!important;
+	min-height: 550px;
+	position: relative;
+}
+#opacityGradient{
+	background-image: linear-gradient(to right, rgb(240, 240, 240) 20%, rgba(240, 240, 240,0.7)) ;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+}
+
+header>div>div{
+	padding: 10vh 0;
+}
+header h2{
+	font-size: 3.2em;
+}
+header h4{
+	color: #bc8c3e;
+	font-size: 1.3em;
+	margin: 5% 0;
+}
+header p{ color:#969696; width: 100%; margin: 15% 0}
+
+#comenzar{
+	display: flex;
+	align-items: center;
+	margin-top: 10%;
+	font-size: 0.9em;
+	font-weight: 600;
+}
+#comenzar img{
+	width: 20px;
+	margin-right: 5px;
+}
+#comenzar img, #comenzar span { cursor: pointer; }
+
+aside{
+	height: 30vh;
+	background-image: url('../imgsBBDD/blackborrowDesc3.jpg');
+	background-size: cover;
+	background-position: 45%;
+	background-attachment: fixed;
+}
+
+main{
+	padding: 10vh 0;
+}
+main h4{
+	color: #bc8c3e;
+	font-size: 1.2em;
+}
+main h2{
+	margin-bottom: 10%;
+	font-size: 2.7em;
+}
+#fontsCont{
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	padding-bottom: 5%;
+}
+
+#fontsCont p{
+	color: #939393;
+	display: block;
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	font-size: 1.5em;
+}
+#casualFont{ font-family: 'Dancing Script' }
+#corpoFont{ font-family: 'Lato' }
+#clasicaFont{ font-family: "Times New Roman", Times, serif; }
+
+#fontsCont span{
+	display: block;
+	text-align: center;
+	font-family: 'Vincent';
+	color: #bc8c3e;
+	margin-bottom: 10%;
+}
+.checks{
+	display: block;
+	margin: auto;
+	margin-top: 2%;
+	cursor: pointer;
+	padding: 5px;
+}
+.inputes{
+	background: #f0f0f0;
+	resize: none;
+	border: none;
+	border: none;
+	padding: 10px 15px;
+	border-radius: 3px;
+	outline: none;
+	width: 89%;
+	margin: 2% 1%;
+	font-family: 'Montserrat';
+	font-weight: 500;
+	transition: .2s;
+}
+.inputes:placeholder{
+	font-family: 'Montserrat';
+}
+.inputes:focus{
+	box-shadow: 1px 1px 2px 1px #ddd;
+}
+#enviarPerso{
+	margin: 5% auto;
+	padding: 7px 15px;
+	cursor: pointer;
+	font-family: 'Montserrat';
+	text-transform: uppercase;
+	font-weight: 600;
+	background: transparent;
+	border: 2px solid #bc8c3e;
+	color: #bc8c3e;
+	transition: .2s;
+	display: block;	
+}
+#selectisoide{
+	width: 98%
+}
+
+.selects{
+	width: 98%;
+}
+
+#confirmacion{
+	font-family: 'Vincent';
+	color: #bc8c3e;
+	margin: 5% 1%;
+	width: 100%;
+	display: none;
+}

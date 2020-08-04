@@ -1,0 +1,299 @@
+/* boton */
+#info-envio{
+    font-size: .75em;
+    font-weight: 600;
+    width: fit-content;
+    text-align: center;
+    color: #777777;
+    border-bottom: dashed 1px #777;
+    margin: 5% auto;
+    cursor: pointer;
+    padding-bottom: 3px;
+    transition: .2s;
+}
+
+#info-envio:hover{
+    border-bottom: solid 1px #777;
+}
+
+
+@media only screen and (min-width: 800px) {
+ 
+/* modal */
+#modal-envio{
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    transition: .25s;
+    display: none;
+}
+
+#modal-envio>div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 4%;
+    background-color: white;
+    border-radius: 6px;
+    min-width: 50%;
+    overflow: hidden;
+}
+
+#modal-envio>div>div{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#modal-envio h5{
+    font-size: 1.2em;
+    font-family: 'Vincent';
+    margin-bottom: 7%;
+    position: relative;
+    width: fit-content;
+    padding-left: 11%;
+}
+#modal-envio h5:before{
+    content: url(../imgs/truck.svg);
+    width: 50px;
+    top: 60%;
+    transform: translateY(-50%);
+    left: 0%;
+    position: absolute;
+    width: 12%;
+}
+#modal-envio img{
+    display: block;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    width: 24px;
+    height: 24px;
+    /* border-radius: 55px; */
+    cursor: pointer;
+}
+#modal-envio p{
+    margin: 1%;
+    font-size: .9em;
+    font-weight: 600;
+    color: #6b6b6b;
+    position: relative;
+}
+#modal-envio p:before{
+    opacity: 0.05;
+    font-weight: 700;
+    position: absolute;
+    top: -45px;
+    left: -15px;
+    font-size: 3em;
+}
+#modal-envio h6{
+    margin-top: 7%;
+    color: #1e1e1e;
+    font-size: .9em;
+
+}
+
+#modal-envio p:nth-child(3):before{
+    content: '.01';
+}
+#modal-envio p:nth-child(5):before{
+    content: '.02';
+}
+#modal-envio p:nth-child(7):before{
+    content: '.03';
+}
+
+#modal-envio>div>div>div{
+    width: 65%;
+    margin: auto;
+    margin-top: 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#modal-envio button{
+    outline: none;
+    border: 2px solid #bc8c3e;
+    background: transparent;
+    color: #bc8c3e;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 7px 15px;
+    border-radius: 3px;
+    font-size: .8em;
+    transition: .15s;
+
+}
+#modal-envio button:hover{
+    background-color: #bc8c3e;
+    color: #fafafa;
+}
+
+#modal-envio span{
+    color: #6b6b6b;
+    font-weight: 700;
+    font-size: .8em;
+    cursor: pointer;
+    position: relative;
+}
+#modal-envio span a{
+    color: inherit;
+}
+
+#modal-envio span:after{
+    content: url(../imgs/whatsapp.svg);
+    filter: saturate(0);
+    position: absolute;
+    top: -130%;
+    right: 23%;
+    width: 55%;
+    z-index: -1;
+    opacity: .2;
+}
+
+}
+
+@media only screen and (max-width: 799px) {
+/* modal */
+#modal-envio{
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    transition: .25s;
+    display: none;
+}
+
+#modal-envio>div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 6% 4%;
+    background-color: white;
+    border-radius: 6px;
+    min-width: 80%;
+    overflow: hidden;
+}
+
+#modal-envio>div>div{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#modal-envio h5{
+    font-size: 1.2em;
+    font-family: 'Vincent';
+    margin-bottom: 7%;
+    position: relative;
+    width: fit-content;
+    padding-left: 20%;
+}
+#modal-envio h5:before{
+    content: url(../imgs/truck.svg);
+    width: 50px;
+    top: 60%;
+    transform: translateY(-50%);
+    left: 0%;
+    position: absolute;
+    width: 17%;
+}
+/* #modal-envio img{
+    display: block;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+} */
+#modal-envio p{
+    margin: 1%;
+    font-size: .9em;
+    font-weight: 600;
+    color: #6b6b6b;
+    position: relative;
+}
+#modal-envio p:before{
+    opacity: 0.05;
+    font-weight: 700;
+    position: absolute;
+    top: -45px;
+    left: -15px;
+    font-size: 3em;
+}
+#modal-envio h6{
+    margin-top: 15%;
+    color: #1e1e1e;
+    font-size: .9em;
+
+}
+
+#modal-envio p:nth-child(4):before{
+    content: '.01';
+}
+#modal-envio p:nth-child(6):before{
+    content: '.02';
+}
+#modal-envio p:nth-child(8):before{
+    content: '.03';
+}
+
+#modal-envio>div>div>div{
+    width: 90%;
+    margin: auto;
+    margin-top: 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#modal-envio button{
+    outline: none;
+    border: 2px solid #bc8c3e;
+    background: transparent;
+    color: #bc8c3e;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 7px 15px;
+    border-radius: 3px;
+    font-size: .8em;
+    transition: .15s;
+
+}
+#modal-envio button:hover{
+    background-color: #bc8c3e;
+    color: #fafafa;
+}
+
+#modal-envio span{
+    color: #6b6b6b;
+    font-weight: 700;
+    font-size: .8em;
+    cursor: pointer;
+    position: relative;
+}
+#modal-envio span a{
+    color: inherit;
+}
+
+#modal-envio span:after{
+    content: url(../imgs/whatsapp.svg);
+    filter: saturate(0);
+    position: absolute;
+    top: -130%;
+    right: 23%;
+    width: 55%;
+    z-index: -1;
+    opacity: .2;
+}
+
+
+}
