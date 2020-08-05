@@ -50,7 +50,7 @@ var cantidad = 1;
         // console.log(carrito_str)
 
         localStorage.setItem("carrito", carrito_str);
-        window.location="../latam/carrito"
+        window.location="./latam/carrito"
     })
  
 
