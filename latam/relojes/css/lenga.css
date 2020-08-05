@@ -1,0 +1,31 @@
+#portada-prd{
+    background-image: url('../fotos/lenga-portada.jpg');
+    background-image: radial-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.43)), url('../fotos/lenga-portada.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 1s ease-out;
+    background-position: 102% 35%;
+}
+#seccion-vetas img{
+    width: 100%;
+    top: -20%;
+}
+#seccion-vetas img{
+    height: 100%;
+    top: 0%;
+    left: 50%;
+    width: auto;
+    transform: translateX(-50%);
+}
+#seccion-frase-2{
+    background-image: url('../imgs/quemanta-wallpaper.jpg');
+    background-size: cover;
+    background-position: 0 50%;
+}
+@media (max-width: 1100px) {
+    #seccion-vetas img{
+        height: 100%;
+        top: 0%;
+        left: 13%;
+    }
+}
